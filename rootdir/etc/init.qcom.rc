@@ -43,8 +43,6 @@ on init
     mkdir /sns 0775 system system
     mkdir /mpt 0755 system system
 
-    # Support legacy paths
-    symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
@@ -324,7 +322,7 @@ on boot
     chown system graphics /sys/class/graphics/fb0/idle_time
     chmod 0664 /sys/class/graphics/fb0/idle_time
 
-    write /dev/wcnss_wlan 1
+    write /dev/wcnss_wlan ""
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd

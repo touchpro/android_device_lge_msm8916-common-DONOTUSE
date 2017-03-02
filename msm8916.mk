@@ -41,7 +41,7 @@ PRODUCT_COPY_FILES += \
 -include $(LOCAL_PATH)/system_prop.mk
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
 # Audio
 PRODUCT_PACKAGES += \

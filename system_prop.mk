@@ -22,6 +22,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.feature=1
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    qcom.bluetooth.soc=smd
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
