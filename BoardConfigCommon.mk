@@ -87,9 +87,10 @@ BOARD_USES_QCOM_HARDWARE := true
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Radio
-BOARD_RIL_CLASS := ../../../device/lge/msm8916-common/ril/
-TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
+# RIL
+BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
+BOARD_GLOBAL_CPPFLAGS += -DUSE_RIL_VERSION_10
+TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk

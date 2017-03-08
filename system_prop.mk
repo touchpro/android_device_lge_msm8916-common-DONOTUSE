@@ -69,7 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=false \
     persist.radio.apm_sim_not_pwdn=1 \
-    ro.telephony.ril_class=LgeLteRIL \
     ro.use_data_netmgrd=true
 
 # Set max background services
