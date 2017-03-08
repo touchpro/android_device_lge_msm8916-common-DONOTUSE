@@ -43,6 +43,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
 
+# Audio
+PRODUCT_PACKAGES += \
+    audiod \
+    audio.a2dp.default \
+    audio.primary.msm8916 \
+    audio.r_submix.default \
+    audio.usb.default \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing
+
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -68,10 +79,6 @@ PRODUCT_PACKAGES += \
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -139,10 +146,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/set-baseband:system/bin/set-baseband
-
-# Snap
-PRODUCT_PACKAGES += \
-    Snap
 
 # Telephony-ext
 PRODUCT_PACKAGES += telephony-ext
